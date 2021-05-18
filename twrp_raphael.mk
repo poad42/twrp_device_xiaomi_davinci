@@ -15,18 +15,18 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := davinci
+PRODUCT_RELEASE_NAME := raphael
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := davinci
-PRODUCT_NAME := omni_davinci
+PRODUCT_DEVICE := raphael
+PRODUCT_NAME := twrp_raphael
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi Mi 9T
+PRODUCT_MODEL := Xiaomi Mi 9T Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \

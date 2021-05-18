@@ -16,7 +16,7 @@
 
 ALLOW_MISSING_DEPENDENCIES := true
 SOONG_ALLOW_MISSING_DEPENDENCIES := true
-DEVICE_PATH := device/xiaomi/davinci
+DEVICE_PATH := device/xiaomi/raphael
 
 # Architecture
 TARGET_ARCH := arm64
@@ -33,13 +33,13 @@ TARGET_2ND_CPU_VARIANT := cortex-a73
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := sm6150
+TARGET_BOOTLOADER_BOARD_NAME := msmnile
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Platform
-TARGET_BOARD_PLATFORM := sm6150
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno618
+TARGET_BOARD_PLATFORM := msmnile
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 androidboot.usbcontroller=a600000.dwc3 firmware_class.path=/vendor/firmware_mnt/image earlycon=msm_geni_serial,0x880000 loop.max_part=7 cgroup.memory=nokmem,nosocket androidboot.selinux=permissive
@@ -59,7 +59,7 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := davinci
+TARGET_OTA_ASSERT_DEVICE := raphael
 
 # Avb
 BOARD_AVB_ENABLE := true
@@ -90,8 +90,8 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 #Init
-TARGET_INIT_VENDOR_LIB := libinit_davinci
-TARGET_RECOVERY_DEVICE_MODULES := libinit_davinci
+TARGET_INIT_VENDOR_LIB := libinit_raphael
+TARGET_RECOVERY_DEVICE_MODULES := libinit_raphael
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true

@@ -52,19 +52,19 @@ void vendor_load_properties() {
     std::string device_region = android::base::GetProperty("ro.boot.hwc", "");
     if (device_region == "CN")
     {
-        load_properties("davinci");
+        load_properties("raphael");
     }
     else if (device_region == "INDIA")
     {
-        load_properties("davinciin");
+        load_properties("raphaelin");
     }
     else if (device_region == "GLOBAL")
     {
-        load_properties("davinci");
+        load_properties("raphael");
     }
     else
     {
-        load_properties("davinci");
+        load_properties("raphael");
     }
 }
 
